@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "HZRTSPlayer.h"
 @interface ViewController ()
 
 @end
@@ -16,12 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    CGRect playerSize = CGRectMake(0, 0, 320, 280);
+    HZRTSPlayer * player = [[HZRTSPlayer alloc] initWithFrame:playerSize videoPath:@"rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov" useTcp:NO];
+    
+    player.center = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2);
+    [self.view addSubview:player];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 @end

@@ -140,7 +140,7 @@
     }
 	
     // Allocate video frame
-    pFrame = avcodec_alloc_frame();
+    pFrame = av_frame_alloc();
 			
 	outputWidth = pCodecCtx->width;
 	self.outputHeight = pCodecCtx->height;

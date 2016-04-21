@@ -130,6 +130,10 @@
 		66DA2F861CC8787C0013E3E3 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66DA2F1D1CC8787C0013E3E3 /* libavutil.a */; };
 		66DA2F871CC8787C0013E3E3 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66DA2F1E1CC8787C0013E3E3 /* libswresample.a */; };
 		66DA2F881CC8787C0013E3E3 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66DA2F1F1CC8787C0013E3E3 /* libswscale.a */; };
+		66DA2F8B1CC87E010013E3E3 /* HZRTSPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 66DA2F891CC87E010013E3E3 /* HZRTSPlayer.h */; };
+		66DA2F8C1CC87E010013E3E3 /* HZRTSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 66DA2F8A1CC87E010013E3E3 /* HZRTSPlayer.m */; };
+		66DA2F901CC8875E0013E3E3 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DA2F8E1CC8875E0013E3E3 /* play@2x.png */; };
+		66DA2F911CC8875E0013E3E3 /* stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66DA2F8F1CC8875E0013E3E3 /* stop@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -260,6 +264,10 @@
 		66DA2F1D1CC8787C0013E3E3 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavutil.a; sourceTree = "<group>"; };
 		66DA2F1E1CC8787C0013E3E3 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
 		66DA2F1F1CC8787C0013E3E3 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
+		66DA2F891CC87E010013E3E3 /* HZRTSPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZRTSPlayer.h; sourceTree = "<group>"; };
+		66DA2F8A1CC87E010013E3E3 /* HZRTSPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZRTSPlayer.m; sourceTree = "<group>"; };
+		66DA2F8E1CC8875E0013E3E3 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
+		66DA2F8F1CC8875E0013E3E3 /* stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,8 +356,11 @@
 		66DA2EAB1CC8787C0013E3E3 /* HZRTSPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				66DA2F8D1CC8875E0013E3E3 /* Images */,
 				66DA2EAC1CC8787C0013E3E3 /* FFMpegDecoder */,
 				66DA2EB31CC8787C0013E3E3 /* FFMpegiOS */,
+				66DA2F891CC87E010013E3E3 /* HZRTSPlayer.h */,
+				66DA2F8A1CC87E010013E3E3 /* HZRTSPlayer.m */,
 			);
 			path = HZRTSPlayer;
 			sourceTree = "<group>";
@@ -545,6 +556,15 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		66DA2F8D1CC8875E0013E3E3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				66DA2F8E1CC8875E0013E3E3 /* play@2x.png */,
+				66DA2F8F1CC8875E0013E3E3 /* stop@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -595,6 +615,7 @@
 				66DA2F681CC8787C0013E3E3 /* murmur3.h in Headers */,
 				66DA2F6A1CC8787C0013E3E3 /* opt.h in Headers */,
 				66DA2F301CC8787C0013E3E3 /* vorbis_parser.h in Headers */,
+				66DA2F8B1CC87E010013E3E3 /* HZRTSPlayer.h in Headers */,
 				66DA2F6D1CC8787C0013E3E3 /* pixelutils.h in Headers */,
 				66DA2F311CC8787C0013E3E3 /* xvmc.h in Headers */,
 				66DA2F2A1CC8787C0013E3E3 /* old_codec_ids.h in Headers */,
@@ -710,7 +731,9 @@
 			files = (
 				66DA2C5E1CC729400013E3E3 /* LaunchScreen.storyboard in Resources */,
 				66DA2C5B1CC729400013E3E3 /* Assets.xcassets in Resources */,
+				66DA2F901CC8875E0013E3E3 /* play@2x.png in Resources */,
 				66DA2C591CC729400013E3E3 /* Main.storyboard in Resources */,
+				66DA2F911CC8875E0013E3E3 /* stop@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +749,7 @@
 				66DA2C531CC729400013E3E3 /* AppDelegate.m in Sources */,
 				66DA2C501CC729400013E3E3 /* main.m in Sources */,
 				66DA2F211CC8787C0013E3E3 /* AudioStreamer.m in Sources */,
+				66DA2F8C1CC87E010013E3E3 /* HZRTSPlayer.m in Sources */,
 				66DA2F231CC8787C0013E3E3 /* RTSPStreamer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
